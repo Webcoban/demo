@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Reactjs course" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, ReactJs" />
+    <meta name="author" content="Nguyen" />
+    <link rel="icon" type="image/x-icon" href="https://www.w3schools.com/favicon.ico" />
+    <title>HTML</title>
+    <style>
+        a:link {
+            color: green;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:visited {
+            color: pink;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Showing tags</h3>
+    <div>
+        <p>Papagraph</p>
+        <br />
+        <br />
+        <br />
+        <hr />
+        <hr />
+        <h1>h &nbsp; &copy; 1</h1>
+        <h2>h2</h2>
+        <h4>h4</h4>
+        <div class="">...</div>
+        <h6></h6>
+        <hr />
+    </div>
+
+    <h3 id="format-tags">format tags</h3>
+    <div>
+        Pytago: a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+        <br />
+        Water: H<sub>2</sub>O
+        <br />
+        <b> The b (bold) make this text bold</b>
+        <br />
+        <strong>
+            The <span style="color: red;">strong</span> make this text bold(mang ca ve mat
+            nghia nhan manh)
+        </strong>
+        <br />
+        <i>The (i) italic make this text italic</i>
+        <br />
+        <em>
+            The em (emphasize - nhan manh) make this text italic (mang ca ve mat nghia
+            nhan manh)
+        </em>
+        <del> The small make this text is deleted</del>
+        <small>The small make this text small</small>
+        <mark>The small make this text is marked</mark>
+        <ins>The ins (inserted) make this text is inserted</ins>
+    </div>
+
+    <!-- block and inline -->
+    <div>div</div>
+    <span>sp1</span>
+    <span>sp2</span>
+
+    <!-- Image -- src - source -->
+    <!-- Extermal -->
+    <!-- <img 
+        src="https://cdn.sforum.vn/sforum/wp-content/uploads/2023/01/top-phim-doraemon-hay-nhat.jpg" alt="" 
+    /> -->
+
+    <!-- Intermal -->
+    <img 
+        width="200" 
+        height="200" 
+        src="../img/doreamon.jpg" 
+        alt="doreamon.jpg" 
+    />
+        <!-- Xuoong dong moi thuoc tinh o doan img tu 95 - 107 -->
+    <img 
+        width="200" 
+        height="200" 
+        src="/html/img/doreamon.jpg" 
+        alt="" 
+    />
+    <!-- <img src="https://vnexpress.net/nha-gia-re-chia-khoa-pha-bang-bat-dong-san-4572701.html" alt=""> -->
+
+    <!-- link -->
+    <a target="_blank" href="https://google.com">Go to Google</a>
+
+    <a id="go-to-about" href="/html/src/about.html">Go to About</a>
+
+    <!-- list (order, unorder), table -->
+    <ol type="i">
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+    </ol>
+    <ul style="list-style-type: circle;">
+        <li>li1</li>
+        <li>li2</li>
+        <li>
+            li3
+            <ol type="i">
+                <li>li1</li>
+                <li>li2</li>
+                <li>li3</li>
+            </ol>
+        </li>
+    </ul>
+    <!-- table   -->
+    <table>
+        <thead>
+            <tr>
+                <!-- table row -->
+                <td rowspan="2">STT</td>
+                <td colspan="2">Info</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nam</td>
+                <td>abc.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ngoc</td>
+                <td>Ngoc.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nhan</td>
+                <td>Nhan.it</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+    
+    <!-- layouts -->
+    <!-- html5 -->
+    <header>Header</header>
+    <section>
+        <article>
+            <h3>Title</h3>
+            <p>description</p>
+        </article>
+        <article>
+            <h3>Title</h3>
+            <p>description</p>
+        </article>
+    </section>
+    <footer>Footer</footer>
+    <!-- before html5 -->
+    <div class="header"></div>
+    <div class="body"></div>
+    <div class="footer"></div>
+
+    <!-- form -->
+    <hr />
+    <h3>Forms</h3>
+    <!-- action usually use for 'server rendering' -->
+    <form action="/login" method="get">
+        <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" placeholder="Email" type="email" />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="password" 
+                id="password" 
+            />
+        </div>
+        <div>
+            <label for="from">From</label>
+            <select name="from" id="from">
+                <optgroup label="Domestic">
+                    <option value="HCM1">HCM</option>
+                    <option value="HCM2">HCM</option>
+                    <option value="HN">HN</option>
+                    <option value="DN">DN</option>
+                </optgroup>
+                <optgroup label="Internation">
+                    <option value="KLIA">KLIA</option>
+                </optgroup>
+            </select>
+        </div>
+        <div>
+            <span>Gender</span>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male" />
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female" />
+        </div>
+        <div>
+            <input id="agreement" type="checkbox">
+            <label for="agreement">Do you a agree with our police about ...</label>
+            
+        </div>
+        <div>
+            <textarea name="des" id="des" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+<!-- ifarme -->
+<!-- <iframe 
+    src="https://vnexpress.net/" 
+    frameborder="0"></iframe> -->
+
+<iframe 
+width="560" 
+height="315" 
+src="https://www.youtube.com/embed/jOZqF7to10I" 
+title="YouTube video player" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen>
+</iframe>
+
+<!-- not popular -->
+<audio src=""></audio>
+<video src=""></video>
+<canvas></canvas>
+</body>
+</html>
